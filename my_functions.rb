@@ -22,7 +22,19 @@ def find_item(array, string)
 end
 
 def get_first_key(hash)
-  for item in hash.keys
-    return item
+  return hash.keys[0]
+end
+
+def find_oldest_person(people)
+
+  oldest = 0
+
+  for person in people
+    if (person[:age] > oldest)
+      oldest = person[:age]
+      result = person
+    end
   end
+
+  return result[:name]
 end

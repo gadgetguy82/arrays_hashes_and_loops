@@ -73,4 +73,17 @@ class My_Functions < MiniTest::Test
     assert_equal( 'Alice', result )
   end
 
+  def test_find_oldest_persons_name
+    people = [
+      {name: 'Jim', age: 21},
+      {name: 'Alice', age: 11},
+      {name: 'Bob', age: 67},
+      {name: 'Juan', age: 43},
+      {name: 'Craig', age: 23},
+    ]
+
+    oldest = find_oldest_person(people)
+    assert_equal('Bob', oldest)
+  end
+
 end
